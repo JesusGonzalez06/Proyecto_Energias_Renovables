@@ -8,7 +8,7 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="/assets/icons/favicon-32x32.png"
+      href="assets/icons/favicon-32x32.png"
     />
     <link rel="stylesheet" href="assets/css/normalize.css" />
     <link
@@ -23,7 +23,22 @@
       <nav class="navbar navbar-expand-lg mi-navbar">
         <div class="container">
           <a class="navbar-brand d-flex align-items-center" href="index.html">
-            <img src="assets/icons/leaf.png" width="28" class="me-2" />
+            <!-- inline SVG logo (allows control with CSS: fill/currentColor) -->
+            <svg
+              class="nav-logo me-2"
+              width="28"
+              height="28"
+              viewBox="0 0 48 48"
+              role="img"
+              aria-label="Logo Energía Renovable Global"
+            >
+              <title>Logo - Energía Renovable Global</title>
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="M31.197 33.609c-3.86 3.313-10.505 4.373-16.005.214 1.282-2.014 6.075-8.804 14.26-12.078l-.556-1.393c-7.977 3.191-12.782 9.372-14.573 12.047-1.513-3.531-1.792-6.971-.775-10.021.947-2.846 2.998-5.146 5.774-6.477 3.986-1.91 6.896-2.212 9.977-2.531 2.933-.304 5.949-.616 9.79-2.346-.387 6.263-2.22 17.714-7.892 22.585zm8.749-26.372c-4.455 2.475-7.613 2.803-10.957 3.149-3.199.331-6.508.675-10.963 2.81-3.516 1.684-6.118 4.609-7.325 8.234-1.316 3.954-.899 8.355 1.16 12.788-2.209 2.801-4.268 6.68-4.861 7.83h3.402c.816-1.487 2.102-3.694 3.441-5.486 2.951 2.087 6.151 2.986 9.209 2.986 3.858 0 7.489-1.421 10.099-3.664 7.137-6.128 9.023-20.56 9.023-27.336V6l-2.228 1.237z"
+              />
+            </svg>
             Energía Renovable Global
           </a>
 
@@ -54,39 +69,79 @@
         </div>
       </nav>
     </header>
-
     <main class="py-5">
       <section class="container my-4">
-        <!-- TÍTULO PRINCIPAL DINÁMICO -->
-        <h2 id="titulo-principal" class="seccion-titulo text-center mb-4"></h2>
-
-        <!-- BOTONES DINÁMICOS -->
-        <div id="botones-contenedor" class="text-center mb-4"></div>
-
-        <!-- CARD PRINCIPAL (HERO DINÁMICO) -->
-        <article class="solar-card p-4">
-          <!-- 🔥 Encabezado con flex -->
-          <div class="hero-header d-flex align-items-center gap-4">
-            <!-- Imagen -->
-            <div class="hero-img">
+        <!-- CARD HERO -->
+        <article class="solar-card p-4 shadow-lg border-0 rounded-4">
+          <h2 id="titulo-principal" class="titulo-principal text-center mb-4">
+            Fuentes de Energía Renovable
+          </h2>
+          <div id="botones-contenedor" class="text-center mb-4"></div>
+          <div class="row align-items-center">
+            <!-- ÍCONO -->
+            <div class="col-md-2 text-center">
               <img
                 id="energia-icono"
                 src=""
                 alt="Energía"
-                class="img-fluid solar-img"
+                class="img-fluid hero-icon"
               />
             </div>
 
-            <!-- Títulos -->
-            <div class="hero-info">
-              <h2 class="card-title"></h2>
+            <!-- TÍTULOS -->
+            <div class="col-md-8">
+              <h2 class="card-title mb-1"></h2>
               <div id="estrellas" class="estrellas mb-2"></div>
-              <h5 class="card-subtitle"></h5>
+              <h5 class="card-subtitle mb-3"></h5>
+              <p class="card-text"></p>
             </div>
           </div>
 
-          <!-- 🔽 Descripción full-width debajo -->
-          <p class="card-text mt-3"></p>
+          <!-- ⚡️⚡️ AQUÍ VAN LAS TARJETAS DINÁMICAS ⚡️⚡️ -->
+          <div class="row gy-4 mt-4" id="info-cards">
+            <div class="col-md-4">
+              <div class="info-card p-3 rounded-4 h-100">
+                <h5 class="info-title mb-2">Beneficios Ambientales</h5>
+                <ul id="beneficios-list" class="info-list"></ul>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="info-card p-3 rounded-4 h-100">
+                <h5 class="info-title mb-2">Datos Clave</h5>
+                <ul id="datos-list" class="info-list"></ul>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="info-card p-3 rounded-4 h-100">
+                <h5 class="info-title mb-2">Potencial en Colombia</h5>
+                <ul id="colombia-list" class="info-list"></ul>
+              </div>
+            </div>
+
+            <!-- TARJETA ANCHA FINAL -->
+            <div
+              class="wide-card p-4 mt-4 d-flex align-items-center gap-4 rounded-4 border"
+            >
+              <!-- Ícono -->
+              <div class="wide-icon text-center">
+                <img
+                  id="wide-icon"
+                  src="assets/icons/info_circle.svg"
+                  alt="Ícono"
+                  class="img-fluid"
+                  style="max-width: 80px"
+                />
+              </div>
+
+              <!-- Texto -->
+              <div class="wide-info">
+                <h4 id="wide-title" class="mb-2"></h4>
+                <p id="wide-text" class="mb-0"></p>
+              </div>
+            </div>
+          </div>
         </article>
       </section>
     </main>
