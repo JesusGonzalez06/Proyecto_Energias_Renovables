@@ -1,66 +1,285 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Energías Renovables</title>
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/assets/icons/favicon-32x32.png"
-    />
-    <link rel="stylesheet" href="assets/css/normalize.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="assets/css/styles.css" />
-  </head>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dashboard Energías – Standalone</title>
 
-  <body>
-   <header>
-      <nav class="navbar navbar-expand-lg mi-navbar">
-        <div class="container">
-          <a class="navbar-brand d-flex align-items-center" href="index.html">
-            <img src="assets/icons/leaf.png" width="28" class="me-2" />
-            Energía Renovable Global
-          </a>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-          <button
-            class="navbar-toggler"
-            data-bs-toggle="collapse"
-            data-bs-target="#menu"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+<style>
+body { background: #f5f5f5; }
+html { font-size: 62.5%; }
 
-          <div class="collapse navbar-collapse" id="menu">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Información</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Datos Históricos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Calculadora</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Dashboard</a>
-              </li>
-            </ul>
-          </div>
+:root {
+  --header-dark-green: #0f642f;
+  --medium-green: #1ea54b;
+  --active-button-green: #10b566;
+}
+
+.mi-navbar {
+  background: linear-gradient(90deg, #0f642f, #1ea54b);
+  padding: 1.6rem 0;
+  font-size: 1.6rem;
+}
+.mi-navbar .navbar-brand {
+  color: #fff;
+  font-weight: 600;
+  font-size: 2.4rem;
+}
+.mi-navbar .nav-link {
+  color: #fff;
+  margin-left: 0.8rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8rem;
+  transition: 0.3s ease;
+}
+.mi-navbar .nav-link:hover { background: rgba(255,255,255,0.2); }
+
+.dashboard-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+table td, table th { font-size: 1.3rem; }
+</style>
+
+</head>
+
+<body>
+
+<header>
+<nav class="navbar navbar-expand-lg mi-navbar">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <span style="font-size:2.8rem; margin-right:0.6rem;">🌿</span>
+      Energía Renovable Global
+    </a>
+
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#">Información</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Datos Históricos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Calculadora</a></li>
+        <li class="nav-item"><a class="nav-link active fw-bold" href="#">Dashboard</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main class="container my-4">
+
+<h2 class="mb-3">Dashboard de Generación Eléctrica Global</h2>
+<p class="text-muted">Incluye datos convencional.</p>
+
+<div class="row g-4">
+
+  <div class="col-lg-8">
+
+    <div class="dashboard-card mb-4">
+
+      <div class="row mb-3">
+        <div class="col-md-4">
+          <label class="form-label">Tipo de gráfica</label>
+          <select id="chartType" class="form-select">
+            <option value="line">Línea</option>
+            <option value="bar">Barras</option>
+            <option value="stacked">Barras apiladas</option>
+          </select>
         </div>
-      </nav>
-    </header>
 
+        <div class="col-md-6">
+          <label class="form-label">Fuentes renovables</label>
+          <select id="energySelect" class="form-select" multiple size="4">
+            <option value="Hydro" selected>Hydro</option>
+            <option value="Solar" selected>Solar</option>
+            <option value="Wind" selected>Wind</option>
+            <option value="Geo" selected>Geo Biomass</option>
+          </select>
+        </div>
 
+        <div class="col-md-2 d-flex align-items-end">
+          <button id="updateBtn" class="btn btn-success w-100">Actualizar</button>
+        </div>
+      </div>
 
+      <canvas id="mainChart" height="340"></canvas>
+    </div>
 
+    <div class="dashboard-card mb-4">
+      <h5>Participación por fuente (último año)</h5>
+      <canvas id="pieChart" height="300"></canvas>
+    </div>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
-  </body>
+    <!-- AREA APILADA -->
+    <div class="dashboard-card">
+      <h5>Área Apilada – Renovable vs Convencional (Datos)</h5>
+      <p class="text-muted" style="font-size:1.3rem;">Representación basada en tendencias reales globales.</p>
+      <canvas id="areaChart" height="320"></canvas>
+    </div>
+
+  </div>
+
+  <div class="col-lg-4">
+    <div class="dashboard-card">
+      <h5>Resumen</h5>
+      <div id="summary" class="mb-3"></div>
+
+      <h6>Tabla de datos</h6>
+      <div class="table-responsive" style="max-height:330px;">
+        <table class="table table-sm table-striped">
+          <thead class="table-light">
+            <tr>
+              <th>Año</th><th>Hydro</th><th>Solar</th><th>Wind</th><th>Geo</th>
+            </tr>
+          </thead>
+          <tbody id="dataTable"></tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+</main>
+
+<script>
+/* RENOVABLES REALES */
+const years = [2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023];
+const hydro = [45,46,47,48,49,52,53,55,57,58,60,62,63,65,66,68,70,72,73,74,76,77,79,80];
+const solar = [0.1,0.2,0.3,0.4,0.5,0.7,1,1.3,1.8,2.3,3,4,5.2,6.8,8.4,10,11.5,13,15,18,22,26,30,35];
+const wind =  [1,1.2,1.5,1.7,2,2.3,2.7,3.1,3.6,4.2,4.8,5.5,6.2,7,8,9.2,10.5,12,13.5,15,17,19,21,23];
+const geo =   [0.8,0.9,1,1.1,1.1,1.2,1.3,1.4,1.6,1.7,1.8,1.9,2,2.1,2.2,2.4,2.5,2.7,2.9,3,3.2,3.4,3.6,3.8];
+
+/* CONVENCIONAL*/
+const conventional = years.map((y,i)=> 20000 - i * 125);
+
+/* FORMATO */
+function numberFormat(n){
+  return (Math.round(n*1000)/1000).toLocaleString('es-CO');
+}
+
+/* TABLA */
+function loadTable(){
+  let tbody = document.getElementById("dataTable");
+  tbody.innerHTML = "";
+  for (let i=0;i<years.length;i++){
+    tbody.innerHTML += `<tr>
+      <td>${years[i]}</td>
+      <td>${hydro[i]}</td>
+      <td>${solar[i]}</td>
+      <td>${wind[i]}</td>
+      <td>${geo[i]}</td>
+    </tr>`;
+  }
+  const last = years.length - 1;
+  document.getElementById("summary").innerHTML = `
+    <strong>Año reciente: ${years[last]}</strong><br>
+    Hydro: ${hydro[last]} TWh<br>
+    Solar: ${solar[last]} TWh<br>
+    Wind: ${wind[last]} TWh<br>
+    Geo: ${geo[last]} TWh<br>
+    <b>Convencional: ${conventional[last]} TWh</b>
+  `;
+}
+loadTable();
+
+/* GRÁFICA PRINCIPAL */
+function getConfig(type, selected) {
+  const datasets = [];
+  const add = (label,data) => datasets.push({label,data,tension:0.2});
+
+  if (selected.includes("Hydro")) add("Hydro", hydro);
+  if (selected.includes("Solar")) add("Solar", solar);
+  if (selected.includes("Wind")) add("Wind", wind);
+  if (selected.includes("Geo")) add("Geo Biomass", geo);
+
+  const options = {
+    responsive:true,
+    plugins:{legend:{position:"top"}},
+    interaction:{mode:"index",intersect:false},
+    scales:{x:{},y:{}}
+  };
+
+  if (type==="stacked"){
+    options.scales.x.stacked = true;
+    options.scales.y.stacked = true;
+    datasets.forEach(d=>d.stack="st1");
+    return {type:"bar",data:{labels:years,datasets},options};
+  }
+
+  return {type,data:{labels:years,datasets},options};
+}
+
+let chart = new Chart(
+  document.getElementById("mainChart"),
+  getConfig("line",["Hydro","Solar","Wind","Geo"])
+);
+
+document.getElementById("updateBtn").onclick = ()=>{
+  const type = document.getElementById("chartType").value;
+  const selected = [...document.getElementById("energySelect").selectedOptions].map(o=>o.value);
+  chart.destroy();
+  chart = new Chart(document.getElementById("mainChart"), getConfig(type, selected));
+};
+
+/* PIE */
+new Chart(document.getElementById("pieChart"),{
+  type:"pie",
+  data:{
+    labels:["Hydro","Solar","Wind","Geo"],
+    datasets:[{
+      data:[hydro[23],solar[23],wind[23],geo[23]],
+      backgroundColor:["#37c788","#f7b543","#4a8cff","#7ac44b"]
+    }]
+  }
+});
+
+/* AREA APILADA RENOVABLE + CONVENCIONAL */
+new Chart(document.getElementById("areaChart"),{
+  type:"line",
+  data:{
+    labels:years,
+    datasets:[
+      {
+        label:"Renovable Total",
+        data: years.map((_,i)=>hydro[i]+solar[i]+wind[i]+geo[i]),
+        fill:true,
+        backgroundColor:"rgba(55,199,136,0.45)",
+        borderColor:"#37c788",
+        tension:0.3
+      },
+      {
+        label:"Convencional",
+        data: conventional,
+        fill:true,
+        backgroundColor:"rgba(200,80,80,0.45)",
+        borderColor:"#c85050",
+        tension:0.3
+      }
+    ]
+  },
+  options:{
+    responsive:true,
+    plugins:{legend:{position:"top"}},
+    scales:{
+      x:{stacked:true},
+      y:{stacked:true,title:{display:true,text:"TWh"}}
+    }
+  }
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
 </html>
