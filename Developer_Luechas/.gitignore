@@ -1,0 +1,12 @@
+# Sistema
+.DS_Store
+Thumbs.db
+# VSCode
+.vscode/
+# carpeta de diseños
+design/
+# Node (por si a futuro lo uso)
+node_modules/
+# Archivos temporales
+*.log
+dist/
