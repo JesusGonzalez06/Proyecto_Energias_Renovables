@@ -10,3 +10,4 @@ node_modules/
 # Archivos temporales
 *.log
 dist/
+developer_Luechas/
