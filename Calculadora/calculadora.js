@@ -71,7 +71,7 @@ function calcularTotal() {
     const costoTotal = totalKwh * precioKwh;
     // Conversión kWh → TWh
     const totalTWh = ((totalKwh*12) / 1000000000);
-    
+
     // Porcentaje respecto a 59.85 TWh
     const prome = ((totalTWh * 100) / 59.85).toFixed(6);
 
