@@ -187,105 +187,142 @@ body {
 
 
 
-
-
 /* ============================================
-   TARJETA: TENDENCIAS
+   TARJETA: TENDENCIAS (AMARILLA)
 ============================================ */
 
 .tendencias-card {
-    background: var(--soft-yellow);
+    background: #fff9dd;
     border: 1px solid rgba(200, 170, 0, 0.25);
     border-radius: 14px;
-    box-shadow: var(--soft-shadow);
+    padding: 2rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
 
 .tendencia-title {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     font-weight: 700;
+    color: #856600;
 }
 
 .tendencia-icon {
-    width: 42px;
+    width: 34px;
+    height: auto;
     opacity: 0.9;
 }
 
+/* Lista */
 .tendencias-list {
     list-style: none;
-    margin: 0;
     padding: 0;
+    margin: 0;
 }
 
 .tendencias-list li {
     font-size: 1.45rem;
-    margin-bottom: 1rem;
-    color: var(--text-dark);
+    margin-bottom: 1.2rem;
+    color: #333;
     display: flex;
     align-items: flex-start;
     gap: 1rem;
+    line-height: 1.4;
 }
 
+/* Numerito verde */
 .tendencias-list .numero {
-    background: var(--green-accent);
+    background: #10b566;     /* verde acento */
     color: #fff;
     font-weight: 700;
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
     border-radius: 50%;
     text-align: center;
-    line-height: 28px;
+    line-height: 26px;
     font-size: 1.2rem;
+    flex-shrink: 0;
 }
+
 
 
 /* ============================================
-   TARJETA: COLOMBIA EN CONTEXTO GLOBAL
+   TARJETA: COLOMBIA EN CONTEXTO GLOBAL (AZUL)
 ============================================ */
 
 .colombia-card {
-    background: var(--soft-blue);
+    background: #e8f1ff;
     border: 1px solid rgba(0, 80, 180, 0.2);
     border-radius: 14px;
-    box-shadow: var(--soft-shadow);
+    padding: 2rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
 
 .colombia-title {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     font-weight: 700;
+    color: #1a4da1;
 }
 
 .colombia-icon {
-    width: 42px;
+    width: 34px;
     opacity: 0.9;
 }
 
 .colombia-text {
-    font-size: 1.4rem;
-    color: var(--subtext);
+    font-size: 1.35rem;
+    color: #3a3a3a;
+    margin-top: 0.8rem;
 }
+
 
 
 /* ============================================
-   POTENCIALES (SOLAR / EÓLICO)
+   MINI TARJETAS DE POTENCIAL (SOLAR/EÓLICO)
 ============================================ */
 
 .potencial-box {
-    background: var(--soft-green);
-    border-radius: 12px;
+    background: #eaffef;
     border: 1px solid rgba(0, 130, 40, 0.25);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
 }
 
 .potencial-label {
-    font-size: 1.35rem;
-    color: #333;
+    font-size: 1.3rem;
+    color: #2d572c;
     font-weight: 600;
+    margin-bottom: 0.4rem;
 }
 
 .potencial-value {
     font-size: 2.2rem;
     font-weight: 700;
-    color: var(--green-accent);
+    color: #10b566;
 }
+
+
+
+/* ============================================
+   RESPONSIVE
+============================================ */
+
+@media (max-width: 768px) {
+    .tendencia-title,
+    .colombia-title {
+        font-size: 1.7rem;
+        text-align: center;
+    }
+
+    .tendencia-icon,
+    .colombia-icon {
+        width: 30px;
+    }
+
+    .potencial-value {
+        font-size: 2rem;
+    }
+}
+
 
 
 
