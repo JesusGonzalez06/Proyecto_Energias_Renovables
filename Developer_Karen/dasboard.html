@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Energías - Standalone</title>
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/styles_dasboard.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg mi-navbar">
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <span style="font-size: 2.8rem; margin-right: 0.6rem">🌿</span>
+            Energía Renovable Global
+          </a>
+
+          <button
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Información</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Datos Históricos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Calculadora</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active fw-bold" href="#">Dashboard</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container my-4">
+      <h2 class="mb-3">Dashboard de Generación Eléctrica Global</h2>
+      <p class="text-muted">Incluye datos convencional.</p>
+
+      <div class="row g-4">
+        <div class="col-lg-8">
+          <div class="dashboard-card mb-4">
+            <div class="row mb-3">
+              <div class="col-md-4">
+                <label class="form-label">Tipo de gráfica</label>
+                <select id="chartType" class="form-select">
+                  <option value="line">Línea</option>
+                  <option value="bar">Barras</option>
+                  <option value="stacked">Barras apiladas</option>
+                </select>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Fuentes renovables</label>
+                <select id="energySelect" class="form-select" multiple size="4">
+                  <option value="Hydro" selected>Hydro</option>
+                  <option value="Solar" selected>Solar</option>
+                  <option value="Wind" selected>Wind</option>
+                  <option value="Geo" selected>Geo Biomass</option>
+                </select>
+              </div>
+
+              <div class="col-md-2 d-flex align-items-end">
+                <button id="updateBtn" class="btn btn-success w-100">
+                  Actualizar
+                </button>
+              </div>
+            </div>
+
+            <canvas id="mainChart" height="150"></canvas>
+          </div>
+
+          <div class="dashboard-card mb-4">
+            <h5>Participación por fuente (último año)</h5>
+            <canvas id="pieChart" class="small-chart"></canvas>
+          </div>
+
+          <!-- AREA APILADA -->
+          <div class="dashboard-card">
+            <h5>Área Apilada – Renovable vs Convencional (Datos)</h5>
+            <p class="text-muted" style="font-size: 1.3rem">
+              Representación basada en tendencias reales globales.
+            </p>
+            <canvas id="areaChart" height="150"></canvas>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="dashboard-card">
+            <h5>Resumen</h5>
+            <div id="summary" class="mb-3"></div>
+
+            <h6>Tabla de datos</h6>
+            <div class="table-responsive" style="max-height: 330px">
+              <table class="table table-sm table-striped">
+                <thead class="table-light">
+                  <tr>
+                    <th>Año</th>
+                    <th>Hydro</th>
+                    <th>Solar</th>
+                    <th>Wind</th>
+                    <th>Geo</th>
+                  </tr>
+                </thead>
+                <tbody id="dataTable"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/assets/js/js_dasboard.js"></script>
+  </body>
+</html>
