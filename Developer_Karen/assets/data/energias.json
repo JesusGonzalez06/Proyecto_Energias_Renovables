@@ -1,0 +1,515 @@
+[
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 1965,
+    "Geo Biomass Other - TWh": 0.0,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 3.5439494
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 1966,
+    "Geo Biomass Other - TWh": 0.0,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 3.9372194
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 1967,
+    "Geo Biomass Other - TWh": 0.0,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 4.3892536
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 1968,
+    "Geo Biomass Other - TWh": 0.0,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 4.8910117
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 1969,
+    "Geo Biomass Other - TWh": 0.0,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 5.4379735
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 1970,
+    "Geo Biomass Other - TWh": 0.0,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 6.05274
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 1971,
+    "Geo Biomass Other - TWh": 0.0,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 6.4234085
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 1972,
+    "Geo Biomass Other - TWh": 0.0,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 7.115021
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 1973,
+    "Geo Biomass Other - TWh": 0.0,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 7.7433486
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 1974,
+    "Geo Biomass Other - TWh": 0.0,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 8.7920685
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 1975,
+    "Geo Biomass Other - TWh": 0.189,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 9.7323
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 1976,
+    "Geo Biomass Other - TWh": 0.202,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 10.22642
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 1977,
+    "Geo Biomass Other - TWh": 0.192,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 10.451812
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 1978,
+    "Geo Biomass Other - TWh": 0.206,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 12.07144
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 1979,
+    "Geo Biomass Other - TWh": 0.216,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 13.2593
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 1980,
+    "Geo Biomass Other - TWh": 0.227,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 14.44702
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 1981,
+    "Geo Biomass Other - TWh": 0.212,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 14.26534
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 1982,
+    "Geo Biomass Other - TWh": 0.231,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 15.238536
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 1983,
+    "Geo Biomass Other - TWh": 0.234,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 15.365776
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 1984,
+    "Geo Biomass Other - TWh": 0.255,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 17.14022
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 1985,
+    "Geo Biomass Other - TWh": 0.267,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 18.440771
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 1986,
+    "Geo Biomass Other - TWh": 0.266,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 21.332952
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 1987,
+    "Geo Biomass Other - TWh": 0.268,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 23.24756
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 1988,
+    "Geo Biomass Other - TWh": 0.274,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 24.5194
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 1989,
+    "Geo Biomass Other - TWh": 0.274,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 26.78212
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 1990,
+    "Geo Biomass Other - TWh": 0.274,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 27.495852
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 1991,
+    "Geo Biomass Other - TWh": 0.269,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 27.72608
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 1992,
+    "Geo Biomass Other - TWh": 0.34,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 22.280584
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 1993,
+    "Geo Biomass Other - TWh": 0.389,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 27.856392
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 1994,
+    "Geo Biomass Other - TWh": 0.444,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 32.05839
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 1995,
+    "Geo Biomass Other - TWh": 0.477,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 31.9894
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 1996,
+    "Geo Biomass Other - TWh": 0.496,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 35.287624
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 1997,
+    "Geo Biomass Other - TWh": 0.483,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 31.47576
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 1998,
+    "Geo Biomass Other - TWh": 0.532,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 30.781685
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 1999,
+    "Geo Biomass Other - TWh": 0.457,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 33.700657
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 2000,
+    "Geo Biomass Other - TWh": 0.496,
+    "Solar Generation - TWh": 0.001835014,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 30.815718
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 2001,
+    "Geo Biomass Other - TWh": 0.496,
+    "Solar Generation - TWh": 0.00266875,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 31.632658
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 2002,
+    "Geo Biomass Other - TWh": 0.491,
+    "Solar Generation - TWh": 0.00465125,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 33.968037
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 2003,
+    "Geo Biomass Other - TWh": 0.495,
+    "Solar Generation - TWh": 0.006405,
+    "Wind Generation - TWh": 0.0,
+    "Hydro Generation - TWh": 36.17636
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 2004,
+    "Geo Biomass Other - TWh": 0.467,
+    "Solar Generation - TWh": 0.007951726,
+    "Wind Generation - TWh": 0.05199,
+    "Hydro Generation - TWh": 38.33006
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 2005,
+    "Geo Biomass Other - TWh": 0.503,
+    "Solar Generation - TWh": 0.00953125,
+    "Wind Generation - TWh": 0.04948,
+    "Hydro Generation - TWh": 39.220886
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 2006,
+    "Geo Biomass Other - TWh": 0.5197261,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.06298139,
+    "Hydro Generation - TWh": 42.55789
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 2007,
+    "Geo Biomass Other - TWh": 0.5071364,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.049890976,
+    "Hydro Generation - TWh": 44.24198
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 2008,
+    "Geo Biomass Other - TWh": 0.50934935,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.053918168,
+    "Hydro Generation - TWh": 46.16088
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 2009,
+    "Geo Biomass Other - TWh": 1.0032873,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.057707813,
+    "Hydro Generation - TWh": 40.837364
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 2010,
+    "Geo Biomass Other - TWh": 1.1099824,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.03856992,
+    "Hydro Generation - TWh": 40.55746
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 2011,
+    "Geo Biomass Other - TWh": 1.3783877,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.041271944,
+    "Hydro Generation - TWh": 48.42748
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 2012,
+    "Geo Biomass Other - TWh": 1.4760586,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.05485471,
+    "Hydro Generation - TWh": 47.58171
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 2013,
+    "Geo Biomass Other - TWh": 1.3464338,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.057624802,
+    "Hydro Generation - TWh": 44.36279
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 2014,
+    "Geo Biomass Other - TWh": 1.728923,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.0702303,
+    "Hydro Generation - TWh": 44.741962
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 2015,
+    "Geo Biomass Other - TWh": 1.8229002,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.06837745,
+    "Hydro Generation - TWh": 44.681904
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 2016,
+    "Geo Biomass Other - TWh": 1.9938043,
+    "Solar Generation - TWh": 0.0,
+    "Wind Generation - TWh": 0.050887343,
+    "Hydro Generation - TWh": 46.787926
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 2017,
+    "Geo Biomass Other - TWh": 1.9912593,
+    "Solar Generation - TWh": 0.005,
+    "Wind Generation - TWh": 0.003071419,
+    "Hydro Generation - TWh": 57.32773
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 2018,
+    "Geo Biomass Other - TWh": 2.1187904,
+    "Solar Generation - TWh": 0.012,
+    "Wind Generation - TWh": 0.04344,
+    "Hydro Generation - TWh": 56.65124
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 2019,
+    "Geo Biomass Other - TWh": 2.4441278,
+    "Solar Generation - TWh": 0.13206,
+    "Wind Generation - TWh": 0.06332,
+    "Hydro Generation - TWh": 54.437
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 2020,
+    "Geo Biomass Other - TWh": 2.820657,
+    "Solar Generation - TWh": 0.1908,
+    "Wind Generation - TWh": 0.01012,
+    "Hydro Generation - TWh": 49.83735
+  },
+  {
+    "Entity": "Colombia",
+    "Code": "COL",
+    "Year": 2021,
+    "Geo Biomass Other - TWh": 2.8208168,
+    "Solar Generation - TWh": 0.31732163,
+    "Wind Generation - TWh": 0.059852246,
+    "Hydro Generation - TWh": 59.858196
+  }
+]
