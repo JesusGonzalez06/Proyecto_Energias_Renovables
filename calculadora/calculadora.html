@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Energías Renovables</title>
+    <link rel="icon" type="image/png" href="../assets/icons/favicon-32x32.png"/>
+    <link rel="stylesheet" href="../assets/css/normalize.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="calculadora.css">
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    
+  </head>
+
+  <body>
+   <header>
+      <nav class="navbar navbar-expand-lg mi-navbar">
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center" href="../index.html">
+            <img src="../assets/icons/leaf.png" width="28" class="me-2" />
+            Energía Renovable Global
+          </a>
+
+          <button
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Información</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Datos Históricos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="calculadora.html">Calculadora</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Dashboard</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+
+        <div class="container" id="calculadora-card">
+        
+          <h1 id="Tit"> <img src="../assets/icons/leaf.png" width="28" class="me-2" />CALCULADORA DE CONSUMO ELECTRICO MENSUAL </h1>
+        <br>
+        <p>Esta calculadora permite obtener fácilmente el costo del consumo energético producido por aparatos eléctricos. 
+          Para ello, simplemente introducir los datos requeridos en el siguiente formulario: </p>
+        <div class="input-group">
+            <input type="text" id="nombre" placeholder="Electrodoméstico (Ej. Nevera)">
+            <input type="number" id="potencia" placeholder="Potencia (Watts)">
+            <input type="number" id="horas" placeholder="Horas de uso diario">
+            <button onclick="agregarAparato()">Agregar</button>
+        </div>
+
+        <div class="config-group">
+            <label>Precio por kWh ($): </label>
+            <input type="number" id="precio-kwh" value="500" onchange="calcularTotal()">
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Aparato</th>
+                    <th>Watts</th>
+                    <th>Horas/Día</th>
+                    <th>Consumo Mes (kWh)</th>
+                    <th>Totales</th>
+                </tr>
+            </thead>
+            <tbody id="lista-aparatos">
+                </tbody>
+        </table>
+
+        <div class="totales">
+            <h3>Total Consumo: <span id="total-kwh">0</span> kWh/mes</h3>
+            <h3>Costo Estimado: $<span id="total-precio">0</span></h3>
+            <h3>Promedio del consumo de la energía hídrica generada en Colombia para el año 2024: <span id="prome-al">0</span> %</h3>
+            
+        </div>
+    </div>
+    </main>
+
+     <!-- ================================
+     FOOTER
+    ================================= -->
+    <footer class="footer-section mt-2">
+      <div class="container py-2">
+        <div class="row">
+          <div class="col-md-4 mb-2">
+            <h4 class="footer-brand d-flex align-items-center">
+              <img src="../assets/icons/leaf_header.png" width="26" class="me-2" />
+              Energía Renovable Global
+            </h4>
+            <p class="footer-text">
+              Plataforma educativa para el análisis de datos sobre transición
+              energética justa y fuentes renovables a nivel mundial.
+            </p>
+            <div class="footer-social d-flex gap-3 mt-3">
+              <a href="#"><img src="../assets/icons/twitter.svg" class="footer-icon" /></a>
+              <a href="#"><img src="../assets/icons/facebook.svg" class="footer-icon" /></a>
+              <a href="#"><img src="../assets/icons/instagram.svg" class="footer-icon" /></a>
+              <a href="#"><img src="../assets/icons/github.svg" class="footer-icon" /></a>
+            </div>
+          </div>
+          <div class="col-md-2 mb-2">
+            <h5 class="footer-title">Navegación</h5>
+            <ul class="footer-links">
+              <li><a href="#">Información</a></li>
+              <li><a href="#">Datos Históricos</a></li>
+              <li><a href="#">Calculadora</a></li>
+              <li><a href="#">Dashboard</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 mb-2">
+            <h5 class="footer-title">Recursos</h5>
+            <ul class="footer-links">
+              <li><a href="https://www.kaggle.com/datasets/belayethossainds/renewable-energy-world-wide-19652022">Dataset Global (Kaggle)</a></li>
+              <li><a href="#">Metodología de Cálculo</a></li>
+              <li><a href="#">Transición Energética Justa</a></li>
+              <li><a href="#">Reportes Técnicos</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 mb-2">
+            <h5 class="footer-title">Contacto</h5>
+            <ul class="footer-links">
+              <li>Universidad Nacional de Colombia</li>
+              <li>+57 1 316 5000</li>
+              <li>energia.renovable@unal.edu.co</li>
+            </ul>
+          </div>
+        </div>
+        <hr class="footer-divider" />
+        <p class="footer-bottom text-center mt-3">
+          © 2025 Proyecto Final de Programación - Transición Energética Justa.
+          <br />
+          Este es un proyecto educativo sin fines de lucro.
+        </p>
+      </div>
+    </footer>
+  </div> 
+    
+    <!-- Scripts -->
+    <script src="calculadora.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/data.js"></script>
+  </body>
+</html>
