@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Energías Renovables</title>
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="assets/css/styles_datos.css" />
+  </head>
+
+  <body>
+    <!-- ================================
+           HEADER + NAVBAR
+         ================================= -->
+    <header>
+      <nav class="navbar navbar-expand-lg mi-navbar">
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="assets/icons/leaf_header.png" width="28" class="me-2" />
+            Energía Renovable Global
+          </a>
+          <button
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Información</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="datos.html">Datos Históricos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="calculadora.html">Calculadora</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="dashboard.html">Dashboard</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="py-3" id="main-content">
+      <div class="container">
+        <div class="datos-header mb-4">
+          <h1 class="datos-title">Datos Históricos de Energía Renovable</h1>
+          <p class="datos-subtitle">
+            Datos globales del período 1965–2022. Fuente: Kaggle Dataset
+          </p>
+        </div>
+
+        <section class="datos-section">
+          <h2 class="titulo-busqueda">Consulta de Datos Históricos</h2>
+
+          <!-- BUSCADOR -->
+          <div
+            class="buscador-filtros d-flex align-items-end gap-3 mb-4 flex-wrap"
+          >
+            <!-- País -->
+            <div class="bloque-filtro">
+              <label class="form-label">País</label>
+              <select id="filtro-pais" class="form-select">
+                 <option value="">Seleccionar país...</option>
+                <option value="Algeria">Algeria</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Australia">Australia</option>
+                <option value="Austria">Austria</option>
+                <option value="Azerbaijan">Azerbaijan</option>
+                <option value="Bangladesh">Bangladesh</option>
+                <option value="Belarus">Belarus</option>
+                <option value="Belgium">Belgium</option>
+                <option value="Brazil">Brazil</option>
+                <option value="Bulgaria">Bulgaria</option>
+                <option value="Canada">Canada</option>
+                <option value="Chile">Chile</option>
+                <option value="China">China</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Croatia">Croatia</option>
+                <option value="Cyprus">Cyprus</option>
+                <option value="Czechia">Czechia</option>
+                <option value="Denmark">Denmark</option>
+                <option value="Ecuador">Ecuador</option>
+                <option value="Egypt">Egypt</option>
+                <option value="Estonia">Estonia</option>
+                <option value="Finland">Finland</option>
+                <option value="France">France</option>
+                <option value="Germany">Germany</option>
+                <option value="Greece">Greece</option>
+                <option value="Hungary">Hungary</option>
+                <option value="Iceland">Iceland</option>
+                <option value="India">India</option>
+                <option value="Indonesia">Indonesia</option>
+                <option value="Iran">Iran</option>
+                <option value="Iraq">Iraq</option>
+                <option value="Ireland">Ireland</option>
+                <option value="Israel">Israel</option>
+                <option value="Italy">Italy</option>
+                <option value="Japan">Japan</option>
+                <option value="Kazakhstan">Kazakhstan</option>
+                <option value="Kuwait">Kuwait</option>
+                <option value="Latvia">Latvia</option>
+                <option value="Lithuania">Lithuania</option>
+                <option value="Luxembourg">Luxembourg</option>
+                <option value="Malaysia">Malaysia</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Morocco">Morocco</option>
+                <option value="Netherlands">Netherlands</option>
+                <option value="New Zealand">New Zealand</option>
+                <option value="North Macedonia">North Macedonia</option>
+                <option value="Norway">Norway</option>
+                <option value="Oman">Oman</option>
+                <option value="Pakistan">Pakistan</option>
+                <option value="Peru">Peru</option>
+                <option value="Philippines">Philippines</option>
+                <option value="Poland">Poland</option>
+                <option value="Portugal">Portugal</option>
+                <option value="Qatar">Qatar</option>
+                <option value="Romania">Romania</option>
+                <option value="Russia">Russia</option>
+                <option value="Saudi Arabia">Saudi Arabia</option>
+                <option value="Singapore">Singapore</option>
+                <option value="Slovakia">Slovakia</option>
+                <option value="Slovenia">Slovenia</option>
+                <option value="South Africa">South Africa</option>
+                <option value="South Korea">South Korea</option>
+                <option value="Spain">Spain</option>
+                <option value="Sri Lanka">Sri Lanka</option>
+                <option value="Sweden">Sweden</option>
+                <option value="Switzerland">Switzerland</option>
+                <option value="Taiwan">Taiwan</option>
+                <option value="Thailand">Thailand</option>
+                <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                <option value="Turkey">Turkey</option>
+                <option value="Turkmenistan">Turkmenistan</option>
+                <option value="Ukraine">Ukraine</option>
+                <option value="United Arab Emirates">
+                  United Arab Emirates
+                </option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="United States">United States</option>
+                <option value="Uzbekistan">Uzbekistan</option>
+                <option value="Venezuela">Venezuela</option>
+                <option value="Vietnam">Vietnam</option>
+                <!-- También puedes incluir regiones si lo deseas -->
+                <option value="Africa">África (región)</option>
+                <option value="Asia">Asia (región)</option>
+                <option value="Europe">Europa (región)</option>
+                <option value="North America">Norteamérica (región)</option>
+                <option value="South America">Sudamérica (región)</option>
+                <option value="Oceania">Oceanía (región)</option>
+              </select>
+              
+            </div>
+
+            <!-- Año -->
+            <div class="bloque-filtro">
+              <label class="form-label">Año</label>
+              <select id="filtro-anio" class="form-select">
+                <option value="">Seleccionar año...</option>
+                <option value="1965">1965</option>
+                  <option value="1966">1966</option>
+                  <option value="1967">1967</option>
+                  <option value="1968">1968</option>
+                  <option value="1969">1969</option>
+                  <option value="1970">1970</option>
+                  <option value="1971">1971</option>
+                  <option value="1972">1972</option>
+                  <option value="1973">1973</option>
+                  <option value="1974">1974</option>
+                  <option value="1975">1975</option>
+                  <option value="1976">1976</option>
+                  <option value="1977">1977</option>
+                  <option value="1978">1978</option>
+                  <option value="1979">1979</option>
+                  <option value="1980">1980</option>
+                  <option value="1981">1981</option>
+                  <option value="1982">1982</option>
+                  <option value="1983">1983</option>
+                  <option value="1984">1984</option>
+                  <option value="1985">1985</option>
+                  <option value="1986">1986</option>
+                  <option value="1987">1987</option>
+                  <option value="1988">1988</option>
+                  <option value="1989">1989</option>
+                  <option value="1990">1990</option>
+                  <option value="1991">1991</option>
+                  <option value="1992">1992</option>
+                  <option value="1993">1993</option>
+                  <option value="1994">1994</option>
+                  <option value="1995">1995</option>
+                  <option value="1996">1996</option>
+                  <option value="1997">1997</option>
+                  <option value="1998">1998</option>
+                  <option value="1999">1999</option>
+                  <option value="2000">2000</option>
+                  <option value="2001">2001</option>
+                  <option value="2002">2002</option>
+                  <option value="2003">2003</option>
+                  <option value="2004">2004</option>
+                  <option value="2005">2005</option>
+                  <option value="2006">2006</option>
+                  <option value="2007">2007</option>
+                  <option value="2008">2008</option>
+                  <option value="2009">2009</option>
+                  <option value="2010">2010</option>
+                  <option value="2011">2011</option>
+                  <option value="2012">2012</option>
+                  <option value="2013">2013</option>
+                  <option value="2014">2014</option>
+                  <option value="2015">2015</option>
+                  <option value="2016">2016</option>
+                  <option value="2017">2017</option>
+                  <option value="2018">2018</option>
+                  <option value="2019">2019</option>
+                  <option value="2020">2020</option>
+                  <option value="2021">2021</option>
+                  <option value="2022">2022</option>
+
+              </select>
+            </div>
+
+            <!-- Botón Buscar -->
+            <button id="btn-buscar" class="btn btn-success btn-sm boton-filtro">
+              <i class="bi bi-search"></i>
+              Buscar
+            </button>
+
+            <!-- Botón Descargar -->
+            <a
+              href="assets/data/Datos.csv"
+              download
+              class="btn btn-success btn-sm boton-filtro"
+            >
+              <i class="bi bi-download"></i>
+              DESCARGAR CSV
+            </a>
+          </div>
+
+          <!-- TABLA RESULTADOS -->
+          <div class="table-responsive mt-4">
+            <table
+              id="tabla-resultados"
+              class="table table-striped table-hover"
+            >
+              <thead id="tabla-head"></thead>
+              <tbody id="tabla-body"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- ==========================================
+             SECCIÓN DE TARJETAS (DEBAJO DEL BUSCADOR)
+        =========================================== -->
+        <div class="row g-4 mt-5">
+          <!-- ==========================
+               TENDENCIAS (IZQUIERDA)
+          =========================== -->
+          <div class="col-lg-7">
+            <div class="tendencias-card p-4">
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <img
+                  src="assets/icons/sun_trend.png"
+                  class="tendencia-icon"
+                  alt=""
+                />
+                <h3 class="tendencia-title mb-0">Tendencias Clave 2018-2022</h3>
+              </div>
+
+              <ul class="tendencias-list">
+                <li>
+                  <span class="numero">1</span>
+                  Crecimiento exponencial de energía solar con un aumento del
+                  <strong>241%</strong> en capacidad instalada.
+                </li>
+
+                <li>
+                  <span class="numero">2</span>
+                  Energía eólica muestra un crecimiento sostenido del
+                  <strong>337%</strong> en el período analizado.
+                </li>
+
+                <li>
+                  <span class="numero">3</span>
+                  Hidroeléctrica mantiene liderazgo como fuente renovable más
+                  estable, con crecimiento moderado del <strong>8%</strong>.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ==========================
+               COLOMBIA EN CONTEXTO (DERECHA)
+          =========================== -->
+          <div class="col-lg-5">
+            <div class="colombia-card p-4">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <img
+                  src="assets/icons/stats_blue.png"
+                  class="colombia-icon"
+                  alt=""
+                />
+                <h3 class="colombia-title mb-0">Colombia en Contexto Global</h3>
+              </div>
+
+              <p class="colombia-text">
+                Colombia tiene uno de los potenciales renovables más altos de
+                América Latina. Con un promedio de 4.5 horas solares diarias y
+                vientos constantes en la costa Caribe, el país podría generar
+                hasta 15 veces su demanda energética actual con fuentes
+                renovables.
+              </p>
+
+              <!-- POTENCIALES -->
+              <div class="row g-3 mt-3">
+                <!-- Solar -->
+                <div class="col-6">
+                  <div class="potencial-box p-3 text-center">
+                    <div class="potencial-label">Potencial Solar</div>
+                    <div class="potencial-value">23,000 MW</div>
+                  </div>
+                </div>
+
+                <!-- Eólico -->
+                <div class="col-6">
+                  <div class="potencial-box p-3 text-center">
+                    <div class="potencial-label">Potencial Eólico</div>
+                    <div class="potencial-value">15,000 MW</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ================================
+           FOOTER
+         ================================= -->
+    <footer class="footer-section mt-2">
+      <div class="container py-2">
+        <div class="row">
+          <div class="col-md-4 mb-2">
+            <h4 class="footer-brand d-flex align-items-center">
+              <img src="assets/icons/leaf_header.png" width="26" class="me-2" />
+              Energía Renovable Global
+            </h4>
+            <p class="footer-text">
+              Plataforma educativa para el análisis de datos sobre transición
+              energética justa y fuentes renovables a nivel mundial.
+            </p>
+            <div class="footer-social d-flex gap-3 mt-3">
+              <a href="#">
+                <img src="assets/icons/twitter.svg" class="footer-icon" />
+              </a>
+              <a href="#">
+                <img src="assets/icons/facebook.svg" class="footer-icon" />
+              </a>
+              <a href="#">
+                <img src="assets/icons/instagram.svg" class="footer-icon" />
+              </a>
+              <a href="#">
+                <img src="assets/icons/github.svg" class="footer-icon" />
+              </a>
+            </div>
+          </div>
+          <div class="col-md-2 mb-2">
+            <h5 class="footer-title">Navegación</h5>
+            <ul class="footer-links">
+              <li><a href="index.html">Información</a></li>
+              <li><a href="datos.html">Datos Históricos</a></li>
+              <li><a href="calculadora.html">Calculadora</a></li>
+              <li><a href="dashboard.html">Dashboard</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 mb-2">
+            <h5 class="footer-title">Recursos</h5>
+            <ul class="footer-links">
+              <li><a href="#">Dataset Global (Kaggle)</a></li>
+              <li><a href="#">Metodología de Cálculo</a></li>
+              <li><a href="#">Transición Energética Justa</a></li>
+              <li><a href="#">Reportes Técnicos</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 mb-2">
+            <h5 class="footer-title">Contacto</h5>
+            <ul class="footer-links">
+              <li>Universidad Nacional de Colombia</li>
+              <li>+57 1 316 5000</li>
+              <li>energia.renovable@unal.edu.co</li>
+            </ul>
+          </div>
+        </div>
+        <hr class="footer-divider" />
+        <p class="footer-bottom text-center mt-3">
+          © 2025 Proyecto Final de Programación - Transición Energética Justa.
+          <br />
+          Este es un proyecto educativo sin fines de lucro.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/datos.js"></script>
+    <script src="assets/js/main_datos.js"></script>
+  </body>
+</html>

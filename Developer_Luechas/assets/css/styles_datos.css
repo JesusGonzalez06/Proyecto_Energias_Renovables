@@ -1,0 +1,480 @@
+html {
+  font-size: 62.5%; /* 10px = 1rem */
+}
+
+/* Make box-sizing predictable so padding doesn't increase element width beyond container */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent small accidental horizontal overflow (fallback) - prefer fixing upstream rules */
+/* HABILITAR SCROLL SOLO PARA LA PÁGINA DE DATOS */
+html,
+body {
+  height: auto;
+  overflow: auto;
+}
+
+
+
+
+:root {
+  /* Colores de la paleta */
+  --header-dark-green: #0f642f;
+  --medium-green: #1ea54b;
+  --active-button-green: #10b566;
+  --solar-yellow: #f7b543;
+  --wind-blue: #4a8cff;
+  --hydro-green: #37c788;
+  --bioenergy-green: #7ac44b;
+
+  /* Fondo y superficies */
+  --background-general: #f6fffa;
+  --cards-white: #ffffff;
+
+  /* Sombras */
+  --soft-shadow: rgba(0, 0, 0, 0.08);
+  --energia-color: var(--bioenergy-green);
+  /* Tamaño uniforme para viñetas / puntos en tarjetas y listas - facilita alineación */
+  --info-bullet-size: 0.8rem; /* ~12-13px */
+  /* Control centralizado del ancho máximo del card principal (fácil de ajustar) */
+  --solar-card-max-width: 120rem; /* ~1200px por defecto - aumenta el ancho sin tocar el contenido interno */ 
+}
+
+/* Fondo general de la página */
+body {
+  background: var(--background-general);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  color: #1b1b1b;
+}
+
+/* NAVBAR con degradado (HEADER) */
+.mi-navbar {
+  background: linear-gradient(90deg, #0f642f, #1ea54b);
+  /* navbar aún más compacta */
+  padding: 0.6rem 0;
+  font-size: 1.5rem;
+}
+
+/* Marca (logo + texto) */
+.mi-navbar .navbar-brand {
+  color: #fff;
+  font-weight: 600;
+  font-size: 2rem; /* un poco más pequeño para ahorrar espacio */
+}
+
+/* Nav logo inline SVG: inherit color (currentColor) and allow CSS control */
+.nav-logo {
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor; /* this lets the SVG inherit the text color */
+}
+
+/* Links del menú */
+.mi-navbar .nav-link {
+  color: #fff;
+  margin-left: 0.8rem; /* antes 0.5rem (8px) */
+  padding: 0.8rem 1.6rem; /* antes 0.5rem 1rem (8px 16px) */
+  border-radius: 0.8rem;
+  transition: 0.3s ease;
+}
+
+/* Hover */
+.mi-navbar .nav-link:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+/* =================================================== */
+
+/* Contenido header */
+.datos-header {
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+.datos-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--datos-title);
+}
+
+.datos-subtitle {
+    font-size: 1.45rem;
+    color: var(--subtext);
+}
+
+.titulo-busqueda {
+  color: var(--medium-green);
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+#tabla-resultados td {
+  font-size: 1.4rem;
+}
+
+.btn-download {
+  background: var(--medium-green);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.8rem 1.4rem;
+  border-radius: 10px;
+  font-size: 1.35rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.btn-download:hover {
+  background: var(--active-button-green);
+}
+
+.icono-descarga {
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+/* ===== BUSCADOR ===== */
+
+
+/* Tamaño fijo para los selects */
+.bloque-filtro {
+  width: 250px; /* Ajusta si necesitas */
+}
+
+/* Botones alineados a la altura de los selects */
+.boton-filtro {
+  height: 25px !important;
+  display: flex;
+  width: 100px;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+
+
+
+
+
+
+/* ===== TABLA ===== */
+
+#tabla-resultados {
+  font-size: 1.35rem;
+  background: #fff;
+  border-radius: .6rem;
+  overflow: hidden;
+}
+
+#tabla-resultados thead {
+  background: var(--medium-green);
+  color: #fff;
+}
+
+#tabla-resultados td, 
+#tabla-resultados th {
+  vertical-align: middle;
+  padding: .9rem 1.2rem;
+}
+
+/* Mensaje */
+.msg-box {
+  font-size: 1.35rem;
+  margin-top: 1rem;
+  color: var(--medium-green);
+}
+
+
+
+
+
+
+/* ============================================
+   TARJETA: TENDENCIAS (AMARILLA)
+============================================ */
+
+.tendencias-card {
+    background: #fff9dd;
+    border: 1px solid rgba(200, 170, 0, 0.25);
+    border-radius: 14px;
+    padding: 2rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.tendencia-title {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: #856600;
+}
+
+.tendencia-icon {
+    width: 34px;
+    height: auto;
+    opacity: 0.9;
+}
+
+/* Lista */
+.tendencias-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tendencias-list li {
+    font-size: 1.45rem;
+    margin-bottom: 1.2rem;
+    color: #333;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    line-height: 1.4;
+}
+
+/* Numerito verde */
+.tendencias-list .numero {
+    background: #10b566;     /* verde acento */
+    color: #fff;
+    font-weight: 700;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 26px;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+
+
+/* ============================================
+   TARJETA: COLOMBIA EN CONTEXTO GLOBAL (AZUL)
+============================================ */
+
+.colombia-card {
+    background: #e8f1ff;
+    border: 1px solid rgba(0, 80, 180, 0.2);
+    border-radius: 14px;
+    padding: 2rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.colombia-title {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: #1a4da1;
+}
+
+.colombia-icon {
+    width: 34px;
+    opacity: 0.9;
+}
+
+.colombia-text {
+    font-size: 1.35rem;
+    color: #3a3a3a;
+    margin-top: 0.8rem;
+}
+
+
+
+/* ============================================
+   MINI TARJETAS DE POTENCIAL (SOLAR/EÓLICO)
+============================================ */
+
+.potencial-box {
+    background: #eaffef;
+    border: 1px solid rgba(0, 130, 40, 0.25);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.potencial-label {
+    font-size: 1.3rem;
+    color: #2d572c;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.potencial-value {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #10b566;
+}
+
+
+
+/* ============================================
+   RESPONSIVE
+============================================ */
+
+@media (max-width: 768px) {
+    .tendencia-title,
+    .colombia-title {
+        font-size: 1.7rem;
+        text-align: center;
+    }
+
+    .tendencia-icon,
+    .colombia-icon {
+        width: 30px;
+    }
+
+    .potencial-value {
+        font-size: 2rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================================
+   FOOTER STYLES */
+.footer-section {
+  background: #0d1421; /* fondo oscuro */
+  color: #dfe6f0; /* color general de texto */
+  padding-top: 0.6rem;
+}
+
+/* Estilo común para las tarjetas del footer */
+.solar-card,
+.info-card,
+.wide-card {
+  border: 1.5px solid rgba(255, 255, 255, 0.92);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08),
+    inset 0 0 0 2px rgba(255, 255, 255, 0.62);
+  position: relative;
+  background-clip: padding-box;
+}
+
+
+
+
+
+.footer-brand {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.footer-text {
+  font-size: 1.29rem;
+  opacity: 0.85;
+  color: #dfe6f0;
+}
+
+.footer-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: #fff;
+}
+
+.footer-links {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.6rem;
+  font-size: 1.29rem;
+}
+/* Links del footer */
+.footer-links a {
+  color: #b7c4d4;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+/* Links del footer - hover */
+.footer-links a:hover {
+  color: var(--medium-green);
+  text-decoration: none;
+}
+/* Íconos sociales en el footer */
+.footer-icon {
+  width: 4rem; 
+  height: auto; 
+  opacity: 0.85;
+  transition: all 0.2s ease;
+  display: inline-block; 
+  fill: currentColor; 
+}
+/* Íconos sociales en el footer - hover */
+.footer-icon:hover {
+  opacity: 1;
+  transform: scale(1.15); /* Efecto de zoom suave */
+}
+
+
+.footer-bottom {
+  font-size: 1.2rem;
+  opacity: 0.75;
+}
+
+/* Desktop: cap the main card height to the viewport (so the page itself doesn't need to scroll)
+   and allow the card to scroll internally when content is larger than available height.
+   The variables above control header/footer sizing — tweak those to match your layout. */
+/* Ajuste fino para escritorio */
+@media (min-width: 992px) {
+  .solar-card {
+    max-height: none; /* ¡Clave! Elimina altura máxima */
+    overflow: visible;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Header y footer fijos */
+  header {
+    flex-shrink: 0;
+  }
+  
+  footer {
+    flex-shrink: 0;
+  }
+}
+
+/* Móvil: scroll natural */
+@media (max-width: 991px) {
+  html, body {
+    height: auto;
+    overflow: auto;
+  }
+  
+  #site-root {
+    height: auto;
+    min-height: 100vh;
+    display: block;
+  }
+  
+  main {
+    overflow: visible;
+  }
+  
+  .solar-card {
+    max-height: none;
+    overflow: visible;
+    margin: 0.8rem;
+  }
+}
